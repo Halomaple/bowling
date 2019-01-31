@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { ScoringComponent } from './scoring/scoring.component';
 
 @NgModule({
-	declarations: [AppComponent],
+	declarations: [AppComponent, ScoringComponent],
 	imports: [BrowserModule, AppRoutingModule],
 	providers: [],
 	bootstrap: [AppComponent]
