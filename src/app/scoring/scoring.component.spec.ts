@@ -3,7 +3,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { ScoringComponent } from './scoring.component';
 
 fdescribe('ScoringComponent', () => {
-	let component: ScoringComponent;
+	let game: ScoringComponent;
 	let fixture: ComponentFixture<ScoringComponent>;
 
 	beforeEach(async(() => {
@@ -14,18 +14,36 @@ fdescribe('ScoringComponent', () => {
 
 	beforeEach(() => {
 		fixture = TestBed.createComponent(ScoringComponent);
-		component = fixture.componentInstance;
+		game = fixture.componentInstance;
 		fixture.detectChanges();
 	});
 
 	it('should create scoring component', () => {
-		expect(component).toBeTruthy();
+		expect(game).toBeTruthy();
 	});
 
-	it('should score a strike', () => {
-		component.RollStrike();
-		component.Roll(1, 0);
+	it('should score a gutter', () => {
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
+		game.Roll(0);
 
-		expect(component.getScore()).toBe(11);
+		expect(game.Score()).toBe(0);
 	});
 });
